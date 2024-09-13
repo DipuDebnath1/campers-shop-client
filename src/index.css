@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+    background-color:#00ad00 !important;
+}
+
+.image-magnifier-container {
+    position: relative;
+  }
+  
+  .image-magnifier-image {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .magnifier {
+    pointer-events: none; /* Disable interactions inside the magnifier */
+    background-repeat: no-repeat;
+  }
+  
