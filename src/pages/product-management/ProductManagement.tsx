@@ -40,7 +40,7 @@ const ProductManagement = () => {
     return (
         <div className="overflow-x-auto">
         {/* Create New Product Button */}
-      <Link to="/products/create" className="btn bg-green-400 mt-4 ml-4 text-white">
+      <Link to="/create-product" className="btn bg-green-500 mt-4 ml-4 text-white">
         Create New Product
       </Link>
 

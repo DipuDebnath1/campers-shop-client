@@ -41,10 +41,10 @@ const Products = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 pl-5">
                         {
                             products?.map((item:TProduct,i:number)=><div key={i} className="bg-[#4242420b] p-4 rounded relative group">
-                               <p className="absolute left-4 rounded font-semibold p-1 text-sm">{item.stockQuantity ? <span className="text-green-600 "> Available</span> : <span className="text-red-600 "> Unavailable</span> }</p>
+                               <p className="absolute left-2 top-0 rounded font-semibold p-1 text-sm">{item.stockQuantity ? <span className="text-green-600 bg-white px-1 rounded text-[10px]"> Available</span> : <span className="text-red-600  bg-white px-1 rounded text-[10px]"> Unavailable</span> }</p>
                                 <Link to={`/products/${item._id}`}>
                                 <p className="absolute right-4 rounded font-semibold p-1 text-green-500 text-xl hidden group-hover:block transition"><FaShoppingCart /></p>
-                                        <img className="w-full object-cover" src={item.img} alt={item.name} />
+                                        <img className="w-full object-cover h-32" src={item.img} alt={item.name} />
                                     </Link>
                                     <div className="flex justify-between items-center">
                                     <h3 className="py-3 text-xl font-semibold">{item.name}</h3>

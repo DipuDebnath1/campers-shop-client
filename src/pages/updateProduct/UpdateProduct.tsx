@@ -193,7 +193,7 @@ const UpdateProduct = () => {
           </div>
             
              <button type="submit" className={`btn hover:bg-green-400 bg-green-400 text-white `}>
-            {isSubmitting ? 'Submitting...' : 'Create Product'}
+            {isSubmitting ? 'Submitting...' : 'Update Product'}
           </button> 
           
         </form>

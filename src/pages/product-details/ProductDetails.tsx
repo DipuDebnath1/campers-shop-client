@@ -33,6 +33,9 @@ const ProductDetails = () => {
     }
 
     const handleAddToCart = () =>{
+        if(!product.stockQuantity){
+           return toast.error('Sorry Product not available')
+        }
         if (!isAddedProduct) {
             dispatch(addToCartItem({...product,quantity}))
             toast.success('Product Add To Cart Success')
@@ -44,6 +47,7 @@ const ProductDetails = () => {
     return (
 
         <div className="grid lg:grid-cols-2 text-lg items-top">
+
            <figure className="flex justify-center w-full">
             <ImageMagnifier src={product?.img} />
            </figure>

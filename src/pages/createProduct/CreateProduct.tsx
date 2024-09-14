@@ -39,7 +39,6 @@ const CreateProduct = () => {
   const [formErrors, setFormErrors] = useState<Partial<TProductValidateError>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-
   const [createProduct] = useProductCreateMutation()
 
   const handleInputChange = (
@@ -63,7 +62,7 @@ const CreateProduct = () => {
       errors.description = 'Description must be at least 20 characters';
     if (formValues.price <= 0) errors.price = 'Price must be greater than 0';
     if (formValues.stockQuantity <= 0) errors.stockQuantity = 'Stock quantity must be greater than 0';
-    if (!['Hiking', 'Safety', 'Camping Gear', 'Outdoor'].includes(formValues.category)) {
+    if (!['Hiking', 'Safety', 'Camping Gear', 'Outdoor', 'Backpacks & Storage','Lighting & BiPowerOff','Cooking & Food','Tents & Shelters'].includes(formValues.category)) {
       errors.category = 'Please select a valid category';
     }
     if (!formValues.img) errors.img = 'Image URL is required';
@@ -106,11 +105,11 @@ const CreateProduct = () => {
           <input
             type="text"
             name="name"
-            value={formValues.name}
+            value={formValues?.name}
             onChange={handleInputChange}
-            className={`input input-bordered w-full ${formErrors.name ? 'border-red-500' : ''}`}
+            className={`input input-bordered w-full ${formErrors?.name ? 'border-red-500' : ''}`}
           />
-          {formErrors.name && <p className="text-red-500 text-xs italic">{formErrors.name}</p>}
+          {formErrors.name && <p className="text-red-500 text-xs italic">{formErrors?.name}</p>}
         </div>
 
         {/* Description */}
@@ -120,7 +119,7 @@ const CreateProduct = () => {
           </label>
           <textarea
             name="description"
-            value={formValues.description}
+            value={formValues?.description}
             onChange={handleInputChange}
             className={`textarea textarea-bordered w-full ${formErrors.description ? 'border-red-500' : ''}`}
           />
@@ -135,7 +134,7 @@ const CreateProduct = () => {
           <input
             type="number"
             name="price"
-            value={formValues.price}
+            value={formValues?.price}
             onChange={handleInputChange}
             className={`input input-bordered w-full ${formErrors.price ? 'border-red-500' : ''}`}
           />
@@ -150,7 +149,7 @@ const CreateProduct = () => {
           <input
             type="number"
             name="stockQuantity"
-            value={formValues.stockQuantity}
+            value={formValues?.stockQuantity}
             onChange={handleInputChange}
             className={`input input-bordered w-full ${formErrors.stockQuantity ? 'border-red-500' : ''}`}
           />
@@ -164,7 +163,7 @@ const CreateProduct = () => {
           </label>
           <select
             name="category"
-            value={formValues.category}
+            value={formValues?.category}
             onChange={handleInputChange}
             className={`select select-bordered w-full ${formErrors.category ? 'border-red-500' : ''}`}
           >
@@ -190,7 +189,7 @@ const CreateProduct = () => {
           <input
             type="text"
             name="img"
-            value={formValues.img}
+            value={formValues?.img}
             onChange={handleInputChange}
             className={`input input-bordered w-full ${formErrors.img ? 'border-red-500' : ''}`}
           />
@@ -205,7 +204,7 @@ const CreateProduct = () => {
           <input
             type="number"
             name="ratings"
-            value={formValues.ratings}
+            value={formValues?.ratings}
             onChange={handleInputChange}
             className="input input-bordered w-full"
           />
