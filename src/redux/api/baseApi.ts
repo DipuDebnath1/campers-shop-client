@@ -11,7 +11,7 @@ type TResponse = {
 
 export const baseApi = createApi({
     reducerPath:'baseApi',
-    baseQuery:fetchBaseQuery({baseUrl:"https://campers-shop-server-1nmhm6ujf-dipudebnath966gmailcoms-projects.vercel.app/api"}),
+    baseQuery:fetchBaseQuery({baseUrl:"https://campers-shop-server-ks2qowwpn-dipudebnath966gmailcoms-projects.vercel.app/api"}),
     tagTypes:['Product'],
     endpoints:(builder)=>({
         // find all product

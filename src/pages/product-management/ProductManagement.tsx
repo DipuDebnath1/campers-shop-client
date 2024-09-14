@@ -8,7 +8,7 @@ import { useDeleteSingleProductMutation } from "../../redux/api/baseApi";
 
 const ProductManagement = () => {
 
-    const products = useAppSelector(state=>state.products.products)
+    const products = useAppSelector(state=>state.products.data)
 
     const [deleteSingleProduct] = useDeleteSingleProductMutation()
     // Confirm Deletion
