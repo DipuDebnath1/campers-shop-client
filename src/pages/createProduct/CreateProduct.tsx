@@ -174,7 +174,7 @@ const CreateProduct = () => {
             <option value="Outdoor">Outdoor</option>
             <option value="Backpacks & Storage">Backpacks & Storage</option>
             <option value="Lighting & Power">Lighting & Power</option>
-            <option value="Cooking & Food Supplies">Cooking & Food Supplies</option>
+            <option value="Cooking & Food">Cooking & Food Supplies</option>
             <option value="Tents & Shelters">Tents & Shelters</option>
 
           </select>
